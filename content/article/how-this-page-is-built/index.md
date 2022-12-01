@@ -8,7 +8,7 @@ This page is built with [hugo](https://gohugo.io/) and the [bilberry-hugo-theme]
 
 ## Why hugo?
 
-In the last few years I tried several cms-applications like Wordpress, Joomla, Typo3, ect. but all of them where to complicated to maintain. So I searched for something simple but also "good looking". After some google-searches I read about the idea to use static-pages for a personal blog.
+In the last few years I tried several cms-applications like Wordpress, Joomla, Typo3, ect. but all of them where too complicated to maintain. So I searched for something simple but also "good looking". After some google-searches I read about the idea to use static-pages for a personal blog.
 
 Then I tried some generators like [jekyll](https://jekyllrb.com/) or [gatsby](https://www.gatsbyjs.com/) but they did not work right away and also require a lot of work to setup and maintain. Then I found [hugo](https://gohugo.io/) and simply typed `brew install hugo` into my console and it worked.
 
