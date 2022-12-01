@@ -32,5 +32,9 @@ jobs:
           RCLONE_CONFIG_ALLINKL_HOST: ${{ secrets.RCLONE_CONF_SERVER }}
           RCLONE_CONFIG_ALLINKL_USER: ${{ secrets.RCLONE_CONF_USER }}
           RCLONE_CONFIG_ALLINKL_PASS: ${{ secrets.RCLONE_CONF_PASSWORD }}
+          RCLONE_FTP_CONCURRENCY: 10
+          RCLONE_TRANSFERS: 5
+          RCLONE_CHECKERS: 5
+          RCLONE_CHECK_FIRST: true
         with:
           args: sync public ALLINKL:/
