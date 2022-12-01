@@ -21,7 +21,9 @@ author = "Ferdinand Berger"
 ```
 
 ## My daily work
-On my daily work I am a member of the OperationIT-Team [@SICK AG](https://sick.com). Our team is responsible for many production/operations related it systems.
+On my daily work I am a member of the OperationIT-Team [@SICK AG](https://sick.com). Our team is responsible for many production/operations related IT systems.
 
 ## After work
-In my free time I often work on my smart home system based on homeassistant[https://www.home-assistant.io]. Additional I do voluntarily work for a local [DRK](https://www.drk.sexau.de) group.
+First there is my family and after that, there are a few things that consume a lot of my time:
+  - my smart home system based on [homeassistant](https://www.home-assistant.io)
+  - voluntarily work for a local red cross group in [Sexau](https://www.drk.sexau.de)
