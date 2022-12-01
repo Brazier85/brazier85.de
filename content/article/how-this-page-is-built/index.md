@@ -18,6 +18,41 @@ For the comment system I use [giscus](https://giscus.app/de).
 
 The raw content of this page is on [github](https://github.com/Brazier85/brazier85.de). There I use a github-action to deploy the build pages to my personal webspace. The github-action looks like this:
 
-```bash
-echo "Some code"
+```yaml
+name: deploy to all-inkl
+
+on:
+  push:
+    branches:
+      - main
+  pull_request:
+
+jobs:
+  deploy:
+    runs-on: ubuntu-22.04
+    steps:
+      - name: Fetch submodules
+        uses: actions/checkout@v3
+        with:
+          submodules: true  # Fetch Hugo themes (true OR recursive)
+          fetch-depth: 0    # Fetch all history for .GitInfo and .Lastmod
+
+      - name: Setup Hugo
+        uses: peaceiris/actions-hugo@v2
+        with:
+          hugo-version: 'latest'
+          extended: true
+
+      - name: Build
+        run: hugo --minify
+
+      - name: Deploy
+        uses: andreiio/rclone-action@v1
+        env:
+          RCLONE_CONFIG_ALLINKL_TYPE: ftp
+          RCLONE_CONFIG_ALLINKL_HOST: ${{ secrets.RCLONE_CONF_SERVER }}
+          RCLONE_CONFIG_ALLINKL_USER: ${{ secrets.RCLONE_CONF_USER }}
+          RCLONE_CONFIG_ALLINKL_PASS: ${{ secrets.RCLONE_CONF_PASSWORD }}
+        with:
+          args: sync public ALLINKL:/
 ```
