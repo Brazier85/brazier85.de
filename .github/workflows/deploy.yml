@@ -28,9 +28,9 @@ jobs:
       - name: Deploy
         uses: wei/rclone@v1
         env:
-          RCLONE_CONFIG_ALLINKL_TYPE: sftp
+          RCLONE_CONFIG_ALLINKL_TYPE: ftp
           RCLONE_CONFIG_ALLINKL_HOST: ${{ secrets.RCLONE_CONF_SERVER }}
           RCLONE_CONFIG_ALLINKL_USER: s${{ secrets.RCLONE_CONF_USER }}
           RCLONE_CONFIG_ALLINKL_PASS: ${{ secrets.RCLONE_CONF_PASSWORD }}
         with:
-          args: sync public ALLINKL:brazier85.de
+          args: sync public ALLINKL:~
