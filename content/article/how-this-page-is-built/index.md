@@ -56,7 +56,6 @@ jobs:
           RCLONE_FTP_CONCURRENCY: 10
           RCLONE_TRANSFERS: 5
           RCLONE_CHECKERS: 5
-          RCLONE_CHECK_FIRST: true
         with:
           args: sync public ALLINKL:/
 ```
