@@ -1,16 +1,27 @@
 +++
 title = "About me"
 description = "A simple about me page"
-date = "2021-11-30"
+date = "2022-12-01"
 aliases = ["about-me", "about", "contact"]
 author = "Ferdinand Berger"
 +++
 
-# The basics
+## The basics
 
-**name:** Ferdinand (Ferdy) Berger\
-**born:** 12-07-1985
- 
+```yaml
+[person]
+  name: "Ferdinand Berger"
+  nickname: "Ferdy"
+  born: 1985
+  children:
+    - name: Hanna
+      born: 2016
+    - name: Robin
+      born: 2020
+```
 
-# My daily work
-On my daily work I mostly do server related IT stuff [@SICK](https://sick.com)
+## My daily work
+On my daily work I am a member of the OperationIT-Team [@SICK AG](https://sick.com). Our team is responsible for many production/operations related it systems.
+
+## After work
+In my free time I often work on my smart home system based on homeassistant[https://www.home-assistant.io]. Additional I do voluntarily work for a local [DRK](https://www.drk.sexau.de) group.
