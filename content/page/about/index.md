@@ -14,10 +14,11 @@ author = "Ferdinand Berger"
   nickname: "Ferdy"
   born: 1985
   children:
-    - name: Hanna
+    - name: "Hanna"
       born: 2016
-    - name: Robin
+    - name: "Robin"
       born: 2020
+  home: "South-West of Germany"
 ```
 
 ## My daily work
