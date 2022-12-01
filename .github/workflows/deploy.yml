@@ -33,4 +33,4 @@ jobs:
           RCLONE_CONFIG_ALLINKL_USER: s${{ secrets.RCLONE_CONF_USER }}
           RCLONE_CONFIG_ALLINKL_PASS: ${{ secrets.RCLONE_CONF_PASSWORD }}
         with:
-          args: sync public ALLINKL:~
+          args: sync public ALLINKL:/
