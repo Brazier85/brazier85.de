@@ -1,6 +1,6 @@
 ---
 title: "Basic Smart Home Setup"
-date: 2022-12-01T20:30:00+01:00
+date: 2022-12-02T20:30:00+01:00
 draft: false
 
 categories: []
