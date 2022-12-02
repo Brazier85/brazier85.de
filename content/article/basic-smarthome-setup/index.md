@@ -212,7 +212,7 @@ networks:
 **Note:** Treafik has its own compose file
 
 ## How it plays together
-The main application in my setup is Home Assistant. Every container and many other devices in my house are connected in some way to Home Assistant. For all this "Smart-Devices" I defined a separate VLAN (Virtual Network) which is accessible via LAN and WLAN and has its own defined IP rage (192.168.20.0/24). The docker containers got defined Ip addresses in this network via [macvlan](https://docs.docker.com/network/macvlan/). To access the network from outside there are several firewall rules defined on my UDM (Unify Dream Machine).
+The main application in my setup is Home Assistant. Every container and many other devices in my house are connected in some way to Home Assistant. For all this "Smart-Devices" I defined a separate VLAN (Virtual Network) which is accessible via LAN and WLAN and has its own defined IP range (192.168.20.0/24). The docker containers got defined IP addresses in this network via [macvlan](https://docs.docker.com/network/macvlan/). To access the network from outside there are several firewall rules defined on my UDM (Unify Dream Machine).
 
 For each of those containers I could write its own tutorial and writeup on how to set it up - and maybe I will in the future - but for now I will give you a short description for each one.
 
