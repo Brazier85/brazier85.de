@@ -37,3 +37,13 @@ jobs:
           RCLONE_CHECKERS: 5
         with:
           args: sync public ALLINKL:/
+
+      - name: Upload Search Data
+        working-directory: ./algolia # equivalent of 'cd algolia'
+        run: |
+          npm install
+          npm run data-upload -- -c \
+            -f ../public/index.json \
+            -a TUHYJRF01B \
+            -k ${{ secrets.ALGOLIA_ADMIN_API_KEY }} \
+            -n prod_brazier85 

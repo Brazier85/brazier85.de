@@ -1,10 +1,15 @@
-+++
-title = "About me"
-description = "A simple about me page"
-date = "2022-12-01"
-aliases = ["about-me", "about", "contact"]
-author = "Ferdinand Berger"
-+++
+---
+title: "About me"
+description: "A simple about me page"
+date: 2022-12-01
+draft: false
+excludeFromTopNav: false
+
+# set the link if you want to redirect the user.
+link: ""
+# set the html target parameter if you want to change default behavior
+target: "_blank"
+---
 
 ## The basics
 

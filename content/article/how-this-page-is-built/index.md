@@ -2,6 +2,10 @@
 title: "How this page is built"
 date: 2022-12-01T10:46:55+01:00
 draft: false
+
+categories: []
+tags: ["hugo", "github", "pipeline", "all-inkl", "deployment"]
+toc: false
 ---
 
 This page is built with [hugo](https://gohugo.io/) and the [bilberry-hugo-theme](https://github.com/Lednerb/bilberry-hugo-theme). It is hosted on [all-inkl.com](https://all-inkl.com).
