@@ -23,8 +23,7 @@ My Smart Home is based on docker containers running the following applications:
 - [Traefik](https://traefik.io/) (Not only in use for my Smart Home)
 
 All my containers are started and maintained with docker-compose.
-
-```yaml
+{{< code type="yaml" title="docker-compose.yml" >}}
 version: '3'
 
 services:
@@ -208,7 +207,7 @@ networks:
     external: true
   proxy:
     external: true
-```
+{{< /code >}}
 **Note:** Treafik has its own compose file
 
 ## How it plays together

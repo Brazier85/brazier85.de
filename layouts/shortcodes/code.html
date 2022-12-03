@@ -1,0 +1,7 @@
+{{- $type := (.Get "type" | default (.Get 0)) }}
+{{- $title := (.Get "title" | default (.Get 1)) }}
+
+<div class="highlight-wrapper">
+    <div class="highlight-before">{{ $title }}</div>
+        {{ highlight (trim .Inner "\n\r") ($type) "" }}
+</div>
