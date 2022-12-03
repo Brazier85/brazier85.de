@@ -8,7 +8,7 @@ tags: ["hugo", "github", "pipeline", "all-inkl", "deployment"]
 toc: false
 ---
 
-This page is built with [hugo](https://gohugo.io/) and the [bilberry-hugo-theme](https://github.com/Lednerb/bilberry-hugo-theme). It is hosted on [all-inkl.com](https://all-inkl.com).
+This page is built with [hugo](https://gohugo.io/) and the [bilberry-hugo-theme](https://github.com/Lednerb/bilberry-hugo-theme) with some custom changes. It is hosted on [all-inkl.com](https://all-inkl.com).
 
 ## Why hugo?
 
@@ -16,13 +16,13 @@ In the last few years I tried several cms-applications like Wordpress, Joomla, T
 
 Then I tried some generators like [jekyll](https://jekyllrb.com/) or [gatsby](https://www.gatsbyjs.com/) but they did not work right away and also require a lot of work to setup and maintain. Then I found [hugo](https://gohugo.io/) and simply typed `brew install hugo` into my console and it worked.
 
-For the commenting system I use [giscus](https://giscus.app/de).
+For the commenting system I use [giscus](https://giscus.app/) and [algolia](https://www.algolia.com/) as search engine..
 
 ## How it is deployed
 
 The raw content of this page is on [github](https://github.com/Brazier85/brazier85.de). There I use a github-action to built and deploy the pages to my personal webspace. The github-action looks like this:
 
-```yaml
+{{< code type="yaml" title="deploy.yml" >}}
 name: deploy to all-inkl
 
 on:
@@ -62,4 +62,14 @@ jobs:
           RCLONE_CHECKERS: 5
         with:
           args: sync public ALLINKL:/
-```
+
+      - name: Upload Search Data
+      working-directory: ./algolia # equivalent of 'cd algolia'
+      run: |
+        npm install
+        npm run data-upload -- -c \
+          -f ../public/index.json \
+          -a TUHYJRF01B \
+          -k ${{ secrets.ALGOLIA_ADMIN_API_KEY }} \
+            -n prod_brazier85 
+{{< /code >}}
