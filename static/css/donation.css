@@ -1,3 +1,9 @@
+.donation {
+    margin: 0 auto;
+}
+
 .donation img {
-    width: 300px;
+    width: 200px;
+    margin: 0 auto;
+    display: block;
 }

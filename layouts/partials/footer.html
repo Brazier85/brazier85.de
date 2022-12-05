@@ -30,14 +30,6 @@
         </div>
         {{ end }}
 
-        {{ if .Site.Params.showDonation | default true }}
-        <div class="donation">
-            <a href="{{ .Site.Params.donationLink }}" target="_blank" >
-                <img src="{{ .Site.Params.donationImage }}" />
-            </a>
-        </div>
-        {{ end }}
-
         <div class="right">
             {{ if .Site.Params.showSocialMedia | default true }}
             <div class="external-profiles">
@@ -90,6 +82,13 @@
             <a href="{{ .Permalink }}">{{ .Name }}</a>
             {{- end }}
         </div>
+        {{ if .Site.Params.showDonation | default true }}
+            <div class="donation">
+                <a href="{{ .Site.Params.donationLink }}" target="_blank" >
+                    <img src="{{ .Site.Params.donationImage }}" />
+                </a>
+            </div>
+        {{ end }}
         <div class="author">
             <a href="{{ .Site.Params.creditsUrl | default "https://github.com/Lednerb/bilberry-hugo-theme" }}"
                 target="_blank">{{ .Site.Params.creditsText | default "Bilberry Hugo Theme" }}</a>
