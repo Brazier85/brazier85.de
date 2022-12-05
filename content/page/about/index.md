@@ -33,3 +33,6 @@ I am a member of the OperationIT-Team [@SICK AG](https://sick.com). Our team is 
 First there is my family and after that, there are a few things that consume a lot of my time:
   - my Smart Home system based on [homeassistant](https://www.home-assistant.io)
   - voluntary work for the local Red Cross in [Sexau](https://www.drk-sexau.de)
+
+![Support me](/images/kofi_bg_tag_white.png)
+{{% center %}}<a href="https://ko-fi.com/brazier85" target="_blank">Click here to support me on Ko-fi</a>{{% /center %}}
