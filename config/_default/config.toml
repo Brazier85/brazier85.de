@@ -24,7 +24,7 @@ disqusShortname = ""
   # Files are relative to the static/ directory or a URL.
   # Files are imported in the order they appear here, after
   # theme.css and theme.js, respectively.
-  css_modules = ["css/coll_code.css"]
+  css_modules = ["css/coll_code.css","css/donation.css"]
   js_modules = ["js/coll_code.js"]
 
   # Description and meta data for the search engines
@@ -152,6 +152,10 @@ disqusShortname = ""
       { link = "mailto:ferdy@brazier85.de", icon = "fas fa-envelope" },
       { link = "https://github.com/brazier85", icon = "fab fa-github" },
     ]
+
+    showDonation = true
+    donationImage = "/images/kofi_bg_tag_white.png"
+    donationLink = "https://ko-fi.com/brazier85"
 
     # credits line configuration
     copyrightBy = "by Ferdinand Berger"
