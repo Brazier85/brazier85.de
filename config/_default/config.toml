@@ -1,5 +1,5 @@
 title = "Ferdys Notebook"
-baseURL = "/"
+baseURL = "https://brazier85.de"
 
 # Option 1 (recommended): adding the theme as a Hugo module
 # theme = "github.com/Lednerb/bilberry-hugo-theme/v3"
