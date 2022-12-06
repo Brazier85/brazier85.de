@@ -3,7 +3,7 @@ title: "Basic Smart Home Setup"
 date: 2022-12-02T20:20:00+01:00
 draft: false
 
-categories: []
+categories: ["Smart Home", "Code"]
 tags: ["Home Assistant", "ESPHome", "Zigbee2MQTT", "Traefik", "Homegear", "Signal-Cli-Rest-Api", "MQTT", "Smart Home"]
 toc: false
 ---

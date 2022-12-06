@@ -3,7 +3,7 @@ title: "How this page is built"
 date: 2022-12-01T10:46:55+01:00
 draft: false
 
-categories: []
+categories: ["Code"]
 tags: ["hugo", "github", "pipeline", "all-inkl", "deployment"]
 toc: false
 ---
