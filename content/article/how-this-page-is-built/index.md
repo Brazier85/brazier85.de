@@ -73,3 +73,134 @@ jobs:
           -k ${{ secrets.ALGOLIA_ADMIN_API_KEY }} \
             -n prod_brazier85 
 {{< /code >}}
+
+## Changes I made to the theme
+
+**Note:** The exact position of these changes you can find on [github](https://github.com/Brazier85/brazier85.de).
+
+### Added donation image and link
+{{< code type="yaml" title="config.toml" >}}
+showDonation = true
+donationImage = "/images/kofi_bg_tag_white.png"
+donationLink = "https://ko-fi.com/brazier85"
+{{< /code >}}
+
+{{< code type="yaml" title="layouts/partials/footer.html" >}}
+  {{ if .Site.Params.showDonation | default true }}
+      <div class="donation">
+          <a href="{{ .Site.Params.donationLink }}" target="_blank" >
+              <img src="{{ .Site.Params.donationImage }}" />
+          </a>
+      </div>
+  {{ end }}
+{{< /code >}}
+
+
+### External links with _blank
+{{< code type="html" title="layouts/_default/_markup/render-link.html" >}}
+<a href="{{ .Destination | safeURL }}"{{ with .Title}} title="{{ . }}"{{ end }}{{ if strings.HasPrefix .Destination "http" }} target="_blank"{{ end }}>{{ .Text }}</a>
+{{< /code >}}
+
+### Collapsible code blocks
+For this feature you should divinely check out my code on [github](https://github.com/Brazier85/brazier85.de). There are a few things you have to change. First, there are custom css and js files you have to include.
+{{< code type="js" title="static/js/coll_code.js" >}}
+// Collapsible Hugo code blocks
+// by Jiri De Jagere, @JiriDJ
+// modified by Ferdinand Berger @Brazier85
+
+var height = "300px";
+
+if (
+  document.readyState === "complete" ||
+    (document.readyState !== "loading" && !document.documentElement.doScroll)
+) {
+  makeCollapsible();
+} else {
+  document.addEventListener("DOMContentLoaded", makeCollapsible);
+}
+
+function toggle(e) {
+  e.preventDefault();
+  var link = e.target;
+  var div = link.parentElement.parentElement;
+
+  if (link.innerHTML == "show more&nbsp;") {
+    link.innerHTML = "show less&nbsp;";
+    div.style.maxHeight = "";
+    div.style.overflow = "none";
+    link.parentElement.style.bottom = "15px";
+  }
+  else {
+    link.innerHTML = "show more&nbsp;";
+    div.style.maxHeight = height;
+    div.style.overflow = "hidden";
+    link.parentElement.style.bottom = "0px";
+    div.scrollIntoView({ behavior: 'smooth' });
+  }
+}
+
+function makeCollapsible() {
+  var divs = document.querySelectorAll('.highlight-wrapper');
+
+  for (i=0; i < divs.length; i++) {
+    var div = divs[i];
+    if (div.offsetHeight > parseInt(height, 10)) {
+      div.style.maxHeight = height;
+      div.style.overflow = "hidden";
+
+      var e = document.createElement('div');
+      e.className = "highlight-link";
+
+      var html = '<a href="">show more&nbsp;</a>';
+      e.innerHTML = html;
+      e.style.bottom = "0px";
+      div.appendChild(e);
+    }
+  }
+
+  var links = document.querySelectorAll('.highlight-link');
+  for (i=0; i<links.length; i++) {
+    var link = links[i];
+    link.addEventListener('click', toggle);
+  }
+}
+{{< /code >}}
+{{< code type="css" title="static/css/coll_code.css" >}}
+.highlight-before {
+    padding: 4px 0px 0px 4px;
+    margin-bottom: -15px;
+}
+
+.highlight-wrapper {
+    position: relative;
+    background-color: #157EAC;
+    color: #fff;
+    border: 4px solid #157EAC;
+    border-radius: 4px;
+    margin-bottom: 15px;
+}
+
+.highlight-link {
+    position: absolute;
+    right: 0;
+}
+
+.highlight-link a {
+    color: #fff !important;
+}
+
+.highlight {
+    margin-bottom: -24px !important;
+}
+{{< /code >}}
+
+And you need this `shotcode` to render it properly
+{{< code type="yaml" title="layout/shortcodes/code.html" >}}
+{{- $type := (.Get "type" | default (.Get 0)) }}
+{{- $title := (.Get "title" | default (.Get 1)) }}
+
+<div class="highlight-wrapper">
+    <div class="highlight-before">{{ $title }}</div>
+        {{ highlight (trim .Inner "\n\r") ($type) "" }}
+</div>
+{{< /code >}}

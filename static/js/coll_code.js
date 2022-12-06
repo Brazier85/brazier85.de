@@ -22,11 +22,13 @@ function toggle(e) {
     link.innerHTML = "show less&nbsp;";
     div.style.maxHeight = "";
     div.style.overflow = "none";
+    link.parentElement.style.bottom = "15px";
   }
   else {
     link.innerHTML = "show more&nbsp;";
     div.style.maxHeight = height;
     div.style.overflow = "hidden";
+    link.parentElement.style.bottom = "0px";
     div.scrollIntoView({ behavior: 'smooth' });
   }
 }
@@ -45,6 +47,7 @@ function makeCollapsible() {
 
       var html = '<a href="">show more&nbsp;</a>';
       e.innerHTML = html;
+      e.style.bottom = "0px";
       div.appendChild(e);
     }
   }
