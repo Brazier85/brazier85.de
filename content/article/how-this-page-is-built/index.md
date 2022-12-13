@@ -10,6 +10,8 @@ toc: false
 
 This page is built with [hugo](https://gohugo.io/) and the [bilberry-hugo-theme](https://github.com/Lednerb/bilberry-hugo-theme) with some custom changes. It is hosted on [all-inkl.com](https://all-inkl.com).
 
+<!--more-->
+
 ## Why hugo?
 
 In the last few years I tried several cms-applications like Wordpress, Joomla, Typo3, ect. but all of them where too complicated to maintain. So I searched for something simple but also "good looking". After some google-searches I read about the idea to use static-pages for a personal blog.

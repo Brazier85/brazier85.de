@@ -9,6 +9,10 @@ toc: false
 author: "Ferdinand Berger"
 ---
 
+The goal for this short article is, to explain how I manage my dotfiles. There are different files for work and private pcs but all of them are managed by a simple install script. At the end of this article I linked a example dotfile repository.
+
+<!--more-->
+
 ## Why I use dotfiles
 On regular bases I use the following workstations:
 - work windows notebook

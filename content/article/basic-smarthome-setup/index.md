@@ -10,6 +10,8 @@ toc: false
 
 In this article I will explain the basic setup for our/my Smart Home system. In the future there may be some additional articles for a more detailed view on some components.  
 
+<!--more-->
+
 ## Components
 
 My Smart Home is based on docker containers running the following applications:
