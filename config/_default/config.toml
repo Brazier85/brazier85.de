@@ -198,3 +198,7 @@ disqusShortname = ""
     endLevel = 5
     ordered = false
     startLevel = 2
+
+[module]
+[[module.imports]]
+  path = 'github.com/Lednerb/bilberry-hugo-theme/v3'

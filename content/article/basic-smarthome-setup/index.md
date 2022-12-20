@@ -6,6 +6,7 @@ draft: false
 categories: ["Smart Home", "code"]
 tags: ["Home Assistant", "ESPHome", "Zigbee2MQTT", "Traefik", "Homegear", "Signal-Cli-Rest-Api", "MQTT", "Smart Home"]
 toc: false
+author: "Ferdinand Berger"
 ---
 
 In this article I will explain the basic setup for our/my Smart Home system. In the future there may be some additional articles for a more detailed view on some components.  

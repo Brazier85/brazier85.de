@@ -6,6 +6,7 @@ draft: false
 categories: ["code"]
 tags: ["hugo", "github", "pipeline", "all-inkl", "deployment"]
 toc: false
+author: "Ferdinand Berger"
 ---
 
 This page is built with [hugo](https://gohugo.io/) and the [bilberry-hugo-theme](https://github.com/Lednerb/bilberry-hugo-theme) with some custom changes. It is hosted on [all-inkl.com](https://all-inkl.com).
