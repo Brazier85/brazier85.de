@@ -13,7 +13,7 @@ target: "_blank"
 
 ## The basics
 
-```yaml
+{{< code type="yaml" title="About me" >}}
 [person]
   name: "Ferdinand Berger"
   nickname: "Ferdy"
@@ -24,7 +24,7 @@ target: "_blank"
     - name: "Robin"
       born: 2020
   home: "South-West of Germany"
-```
+{{< /code >}}
 
 ## My daily work
 I am a member of the OperationIT-Team [@SICK AG](https://sick.com). Our team is responsible for many production/operations related IT systems.
