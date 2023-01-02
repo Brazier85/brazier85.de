@@ -9,7 +9,7 @@ toc: false
 author: "Ferdinand Berger"
 ---
 
-Recently I stumbled over a article on hackaday which was related to a project from David Zhang on [github](https://github.com/davidz-yt/desk-controller). He made a desk-controller - a small budged - stream desk.
+Recently I stumbled over a article on hackaday which was related to a project from David Zhang on [github](https://github.com/davidz-yt/desk-controller). He made a desk-controller - a small budged - stream deck.
 
 <!--more-->
 
