@@ -1,7 +1,7 @@
 ---
 title: "Intel AMT"
 date: 2023-01-21T20:35:04+01:00
-draft: true
+draft: false
 
 categories: ["intel","amt"]
 tags: ["proxmox","server"]
